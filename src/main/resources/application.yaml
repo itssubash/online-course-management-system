@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: online-course-management-system
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/courses_db
+    username: postgres
+    password: Admin@123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+server:
+  port: 8888
+
+app:
+  jwt:
+    secret: Y291cnNlLW1hbmFnZW1lbnQtc3lzdGVtLXNlY3JldC1rZXktZm9yLWp3dC10b2tlbi1nZW5lcmF0aW9uLTIwMjY=
+    issuer: online-course-management-system
+    access-expiration: 3600000
+    refresh-expiration: 604800000
